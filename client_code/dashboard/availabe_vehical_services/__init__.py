@@ -15,17 +15,20 @@ class availabe_vehical_services(availabe_vehical_servicesTemplate):
     self.init_components(**properties)
     self.user_id = user_id
     # Any code you write here will run before the form opens.
-    List_oxiclinics = []
-    for i, row in enumerate(rows, start=1):
-      # Initialize dictionary to store row data
-      user_info = {}
-      user_info['serial_no'] = i  # Assuming you want to include a serial number
-      user_info['clinic_id'] = row["oxiclinic_id"]
-      user_info['Oxiclinics_Name'] = row['Oxiclinics_Name']
-      user_info['State'] = row['State']
-      
-      # Append dictionary to list
-      List_oxiclinics.append(user_info)
+    data = app_tables.oxiclinics.search(serviceProvider_id =self.id)
+    if not data:
+        alert("No bookings yet on this date")
 
-    # Set repeating panel items
-    self.repeating_panel_1.items = List_oxiclinics
+    customers_list =[]
+    for row in data:
+      customer_details =app_tables.users.get(id=row['user_id'])
+      customer = {}
+      customer["name"]=customer_details['Oxiclinics_Name']
+      customer["email"]=customer_details['email']
+      customer["phone"]=customer_details['phone']
+      customer["slot_time"]=row['book_time']
+      customer["address"]=row['address']
+      customer["image"] = customer_details['profile']
+      customer["date"] = row['book_date']
+      customers_list.append(customer)
+    self.repeating_panel_1.items=customers_list

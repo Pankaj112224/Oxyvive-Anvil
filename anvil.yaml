@@ -58,7 +58,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: Oxiclinics_Name
-      admin_ui: {width: 200}
+      admin_ui: {order: 6, width: 200}
       type: string
     - name: established_year
       admin_ui: {width: 200}
