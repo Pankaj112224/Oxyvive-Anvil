@@ -9,14 +9,14 @@ class availabe_vehical_services(availabe_vehical_servicesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    data = app_tables.oxiwheels.Search()
+    data = app_tables.oxiwheels.search()
     
 
     customers_list =[]
     for row in data:
       customer_details =app_tables.oxiwheels.get(id=row['id'])
       customer = {}
-      customer["name"]=customer_details['Oxigyms_Name']
+      customer["name"]=customer_details['Oxiwheels_Name']
       customer["email"]=customer_details['email']
       customer["phone"]=customer_details['phone']
       # customer["slot_time"]=row['book_time']

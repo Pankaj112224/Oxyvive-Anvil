@@ -11,7 +11,7 @@ class available_zym_address(available_zym_addressTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    data = app_tables.oxigyms.Search()
+    data = app_tables.oxigyms.search()
     
 
     customers_list =[]
@@ -26,4 +26,4 @@ class available_zym_address(available_zym_addressTemplate):
       # customer["image"] = customer_details['profile']
       # customer["date"] = row['book_date']
       customers_list.append(customer)
-    self.repeating_panel_1.items=customers_list
+    self.repeating_panel_2.items=customers_list
