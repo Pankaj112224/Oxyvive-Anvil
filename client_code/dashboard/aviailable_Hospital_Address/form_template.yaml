@@ -5,7 +5,7 @@ container:
     role: null, html: ''}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"ZPNUKB":10,"QRYOYH":50}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -13,6 +13,12 @@ components:
     properties: {}
     type: form:servicers.service_navigation_bar
     layout_properties: {grid_position: 'BTHEQB,DDXDAO', full_width_row: true}
+  - name: button_2
+    properties: {text: back, background: 'theme:Primary 700', foreground: 'theme:Gray
+        100', role: raised, icon_align: left, icon: 'fa:backward', align: left, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'AWPFAF,ZPNUKB'}
+    event_bindings: {click: button_2_click}
   - name: headline_1
     properties: {role: headline, align: center, text: Available Hospitals, bold: true}
     type: Label

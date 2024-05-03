@@ -35,3 +35,7 @@ class aviailable_Hospital_Address(aviailable_Hospital_AddressTemplate):
       # customer["date"] = row['book_date']
       customers_list.append(customer)
     self.repeating_panel_1.items=customers_list
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('dashboard')

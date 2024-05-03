@@ -27,3 +27,7 @@ class available_zym_address(available_zym_addressTemplate):
       # customer["date"] = row['book_date']
       customers_list.append(customer)
     self.repeating_panel_2.items=customers_list
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('dashboard')

@@ -10,7 +10,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: content_panel_copy
-    properties: {}
+    properties: {col_widths: '{"QRYOYH":65,"DOWLOE":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'CNDJPL,WSBVZB', full_width_row: true}
     components:
@@ -18,11 +18,18 @@ components:
       properties: {}
       type: form:servicers.service_navigation_bar
       layout_properties: {grid_position: 'BTHEQB,DDXDAO', full_width_row: true}
+    - name: button_2
+      properties: {text: back, background: 'theme:Primary 700', foreground: 'theme:Gray
+          100', role: raised, icon_align: left, icon: 'fa:backward', align: left,
+        bold: true}
+      type: Button
+      layout_properties: {grid_position: 'AWPFAF,DOWLOE'}
+      event_bindings: {click: button_2_click}
     - name: headline_1
       properties: {role: headline, align: center, text: Available Vehicals, bold: true}
       type: Label
       layout_properties: {grid_position: 'AWPFAF,QRYOYH'}
-    - name: repeating_panel_1
+    - name: repeating_panel_2
       properties: {item_template: servicers.servicers_dashboard.ItemTemplate1, visible: true}
       type: RepeatingPanel
       layout_properties: {grid_position: 'BDVBMN,TEGVIC'}

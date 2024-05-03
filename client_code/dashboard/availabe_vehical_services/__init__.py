@@ -25,3 +25,7 @@ class availabe_vehical_services(availabe_vehical_servicesTemplate):
       # customer["date"] = row['book_date']
       customers_list.append(customer)
     self.repeating_panel_1.items=customers_list
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('dashboard')

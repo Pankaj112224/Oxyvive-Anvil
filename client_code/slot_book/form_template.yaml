@@ -5,7 +5,7 @@ container:
     role: null, html: ''}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"AYFTOU":10,"VBFVNY":50}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -22,11 +22,17 @@ components:
       properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
       type: Label
       layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 466}
+  - name: button_2_copy
+    properties: {text: back, background: 'theme:Primary 700', foreground: 'theme:Gray
+        100', role: raised, icon_align: left, icon: 'fa:backward', align: left, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'OLTNFF,AYFTOU'}
+    event_bindings: {click: button_2_copy}
   - name: label_3
     properties: {align: center, text: Book a Slot, bold: true, foreground: 'theme:Primary
         700', font_size: 20}
     type: Label
-    layout_properties: {grid_position: 'OLTNFF,VBFVNY', full_width_row: true}
+    layout_properties: {grid_position: 'OLTNFF,VBFVNY', full_width_row: false}
   - name: card_1
     properties: {role: card, foreground: '', background: 'theme:Primary 700'}
     type: ColumnPanel

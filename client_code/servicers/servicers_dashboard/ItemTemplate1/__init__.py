@@ -18,7 +18,7 @@ class ItemTemplate1(ItemTemplate1Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('servicers.servicers_dashboard.customer_report')
+    open_form('slot_book')
 
   def timer_1_tick(self, **event_args):
     """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
