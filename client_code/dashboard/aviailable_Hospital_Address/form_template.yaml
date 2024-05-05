@@ -9,10 +9,69 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: service_navigation_bar_1
-    properties: {}
-    type: form:servicers.service_navigation_bar
-    layout_properties: {grid_position: 'BTHEQB,DDXDAO', full_width_row: true}
+  - name: flow_panel_1
+    properties: {spacing_below: small, spacing_above: none, spacing: large}
+    type: FlowPanel
+    layout_properties: {grid_position: 'BGJWHR,FIODVJ', full_width_row: true}
+    components:
+    - name: image_1
+      properties: {role: null, vertical_align: center, height: 82.79998779296875,
+        tooltip: '', border: '', foreground: '', visible: true, display_mode: shrink_to_fit,
+        alt_text: '', spacing_above: small, source: _/theme/shot.png, spacing_below: small,
+        background: '', horizontal_align: right}
+      type: Image
+      layout_properties: {}
+    - name: label_1_copy
+      properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large,
+        align: left}
+      type: Label
+      layout_properties: {}
+    - name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {width: 738.688}
+    - name: label_1
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Home, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: label_5
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Notifations, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: label_4
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Bookings, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: label_2
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Profile, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: label_6
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Reports, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: label_7
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Support, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+    - name: button_1
+      properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Logout, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Primary
+          700', bold: false, underline: false, icon: ''}
+      type: Button
   - name: button_2
     properties: {text: back, background: 'theme:Primary 700', foreground: 'theme:Gray
         100', role: raised, icon_align: left, icon: 'fa:backward', align: left, bold: true}
@@ -23,10 +82,10 @@ components:
     properties: {role: headline, align: center, text: Available Hospitals, bold: true}
     type: Label
     layout_properties: {grid_position: 'AWPFAF,QRYOYH'}
-  - name: repeating_panel_1
-    properties: {item_template: servicers.servicers_dashboard.ItemTemplate1, visible: true}
+  - name: repeating_panel_2
+    properties: {item_template: dashboard.aviailable_Hospital_Address.ItemTemplate5}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'BDVBMN,TEGVIC'}
+    layout_properties: {grid_position: 'AWOSMT,PIWRRD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

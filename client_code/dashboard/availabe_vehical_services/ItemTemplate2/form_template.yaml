@@ -11,19 +11,19 @@ components:
     type: Image
     layout_properties: {grid_position: 'NCTBAX,ODEMMR'}
   - name: label_1
-    properties: {align: center, text: Name, bold: true}
+    properties: {align: center, text: 'Vehical Name :', bold: true}
     type: Label
     layout_properties: {grid_position: 'NCTBAX,RYADMT PVSFQB,QWFVZC'}
   - name: label_2
-    properties: {align: center, text: Email, bold: true}
+    properties: {align: center, text: 'Email :', bold: true}
     type: Label
     layout_properties: {grid_position: 'NCTBAX,RYADMT HDEHLX,XUZPQD'}
   - name: label_3
-    properties: {align: center, text: Phone, bold: true}
+    properties: {align: center, text: 'Phone :', bold: true}
     type: Label
     layout_properties: {grid_position: 'NCTBAX,RYADMT EXFNCG,CXLIXB'}
   - name: label_4
-    properties: {align: center, text: Address, bold: true}
+    properties: {align: center, text: 'Address :', bold: true}
     type: Label
     layout_properties: {grid_position: 'NCTBAX,RYADMT OIRETO,ZIDOLI'}
   - name: label_5
@@ -55,3 +55,4 @@ components:
       role: raised, bold: true}
     type: Button
     layout_properties: {grid_position: 'WJXFGG,VCYWMS'}
+    event_bindings: {click: button_1_click}

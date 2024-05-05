@@ -1,3 +1,58 @@
 is_package: true
 container: {type: ColumnPanel}
-components: []
+components:
+- name: card_1_copy
+  properties: {role: card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XOCSEA,JRMCZB'}
+  components:
+  - name: image_2
+    properties: {source: _/theme/shot.png, role: image, height: 243.19998168945312}
+    type: Image
+    layout_properties: {grid_position: 'IQVXLX,XGJJZC'}
+  - name: label_3
+    properties: {align: center, text: ' Zym Name :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,LSFRUW NYZXYF,QKPCCV'}
+  - name: label_8
+    properties: {align: center, text: 'Email :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,LSFRUW NJMENX,SIHTJO'}
+  - name: label_9
+    properties: {align: center, text: 'Phone :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,LSFRUW TTSNSH,WLAYBC'}
+  - name: label_10
+    properties: {align: center, text: 'Address :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,LSFRUW ZRYMZU,OJNZXD'}
+  - name: label_11
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,XFLYIA CIGQLT,WKZGHF'}
+    data_bindings:
+    - {property: text, code: 'self.item[''name'']', writeback: false}
+  - name: label_12
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,XFLYIA JHPXDF,ZOXIKK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''email'']', writeback: false}
+  - name: label_13
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,XFLYIA RRTGFN,PGCHCI'}
+    data_bindings:
+    - {property: text, code: 'self.item[''phone'']', writeback: false}
+  - name: label_14
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'IQVXLX,XFLYIA LUBPFU,FIQNGU'}
+    data_bindings:
+    - {property: text, code: 'self.item[''address'']', writeback: false}
+  - name: button_3
+    properties: {text: '   Book   ', align: right, role: raised, background: 'theme:Primary
+        700'}
+    type: Button
+    layout_properties: {grid_position: 'VIYUZE,UMFIAS'}
+    event_bindings: {click: button_3_click}
