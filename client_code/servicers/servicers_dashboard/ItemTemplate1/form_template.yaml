@@ -33,8 +33,7 @@ components:
     properties: {role: image, source: _/theme/shot.png}
     type: Image
     layout_properties: {grid_position: 'GWWCVI,POLYQO'}
-    data_bindings:
-    - {property: source, code: 'self.item[''image'']'}
+    data_bindings: []
   - name: label_1
     properties: {align: center, text: ' vedName :', bold: true}
     type: Label
@@ -53,11 +52,13 @@ components:
     layout_properties: {grid_position: 'GWWCVI,DKQKJQ ENVIAG,TLCKSE'}
     data_bindings: []
   - name: label_2
-    properties: {text: USER NAME}
+    properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: USER NAME, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'GWWCVI,HRXEGM IUPOSL,VIZXXH'}
-    data_bindings:
-    - {property: text, code: 'self.item[''name'']'}
+    data_bindings: []
   - name: label_4
     properties: {text: USER@GMAIL.COM}
     type: Label
