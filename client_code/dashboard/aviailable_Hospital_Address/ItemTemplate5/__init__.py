@@ -15,4 +15,4 @@ class ItemTemplate5(ItemTemplate5Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('slot_book')
+    open_form('slot_book_clinic')
