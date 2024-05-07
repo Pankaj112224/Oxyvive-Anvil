@@ -7,7 +7,9 @@ class slot_book_clinic(slot_book_clinicTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
         self.set_button_date()
-
+        self.selected_date = None
+        self.selected_time_slot = None
+        
     def set_button_date(self):
         current_date = datetime.now()
         for i in range(1, 5):
@@ -44,17 +46,27 @@ class slot_book_clinic(slot_book_clinicTemplate):
 
     def button_1_click(self, **event_args):
         self.button_click(1)
+        self.selected_date = datetime.now().date()
+        self.selected_time_slot = self.button_5.text  # Assuming button_5 is the first time slot button
+        print("Selected Date:", self.selected_date)
+        print("Selected Time Slot:", self.selected_time_slot)
 
     def button_2_click(self, **event_args):
         self.button_click(2)
+        self.selected_date = datetime.now().date() + timedelta(days=1)  # Assuming button_6 corresponds to the next day
+        self.selected_time_slot = self.button_6.text
+        print("Selected Date:", self.selected_date)
+        print("Selected Time Slot:", self.selected_time_slot)
 
-    def button_3_click(self, **event_args):
-        self.button_click(3)
-
-    def button_4_click(self, **event_args):
-        self.button_click(4)
+    # Implement button_3_click and button_4_click similarly for the other buttons
 
     def primary_color_1_click(self, **event_args):
+        if self.selected_date and self.selected_time_slot:
+            print("Confirmed Booking:")
+            print("Date:", self.selected_date)
+            print("Time Slot:", self.selected_time_slot)
+        else:
+            print("No date or time slot selected.")
         open_form('wallet')
 
     def button_2_copy(self, **event_args):
